@@ -595,14 +595,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 /* Footer */
 .footer__container{
     padding: 3rem 0 7rem;
@@ -648,6 +640,135 @@
     transform: translateY(-.15rem);
 }
 
+.footer__copy{
+    display: block;
+    margin: 3.5rem 0 0;
+    font-size: var(--font-regular);
+}
+
+footer{
+    background-color: var(--color-light);
+}
+
+
+
+
+/* Breackpints */
+
+/* Dispositivos pequeños */
+@media screen and (max-width: 340px) {
+    .container{
+        margin-inline: 1rem;
+    }
+
+    .nav__menu{
+        padding: 0 0 4rem; 
+    }
+
+    .nav__list{
+        gap: 1rem 1.25rem;
+    }
+
+    .skills__info{
+        grid-templatecolumns: repeat(2, 1fr);
+    }
+}
+
+
+
+/* Dispositivos Medianos */
+@media screen and (min-width: 576px) {
+    .nav,
+    .nav__menu{
+        width: 380px;
+    }
+
+    .nav{
+        margin: 0 auto;
+    }
+
+    .skills__container{
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 767px){
+    .home__container{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .home__data{
+        order: 2;
+    }
+    .home__info:nth-child(3){
+        order: 3;
+        text-align: right;
+    }
+    .home__info{
+        margin-top: 10rem;
+    }
+    .home__info-description{
+        padding-right: 0;
+    }
+
+    .skills__container,
+    .qualification__container
+    .services__container{
+        grid-template-columns: repeat(2, max-content);
+    }
+
+    .skills__container,
+    .services__container{
+        column-gap: 5rem;
+    }
+
+    .quialification__container{
+        justify-content: center;
+        column-gap: 10rem;
+    }
+}
+
+
+/* Dispositivos grandes */
+@media screen and (min-width: 1023px){
+    .header{
+        top: 0;
+        bottom: initial;
+        transition: .4s:   
+    }
+
+    .nav{
+        width: initial;
+        height: calc(var(--header-height) + 1.5rem);
+        box-shadow: none;
+        border-radius: 0;
+        column-gap: 3rem;
+        margin-inline: 1.5rem;
+        padding: 0;      
+    }
+    .nav__link i,
+    .nav__toggle,
+    .nav__close{
+        display: none;
+    }
+    .nav__menu{
+        width: initial;
+        margin-left: auto;
+        transition: background .4s;
+    }
+    .nav__list{
+        display: flex;
+        column-gap: 3rem;
+    }
+    .nav__link{
+        font-size: var(--normal-font-size);
+    }
+    .section{
+        padding-block: 8rem 0;
+    }
+    .home__title{
+        font-size: 2.25rem;
+    }
+}
 
 
 
@@ -660,37 +781,4 @@
 
 
 
-
-
- /* Antiguo */
-
-
- #skills-section {
-     background-color: var(--color-bkg2);
-     color: #fff;
- }
-
- #skills-section div h2 {
-     color: #fff;
- }
-
- #skills-section div h3 {
-     color: #fff;
- }
-
- */
- /* SECTION1 */
- /* .maincontainer {
-     display: flex;
-     flex-grow: 1;
- }
-
- .maincontainer div {
-     width: 100%;
- } */
-
- /* SERVICIOS */
-
- .title-servicios {
-     text-align: center;
- }
+ 
